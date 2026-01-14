@@ -1,0 +1,840 @@
+/* ====================================
+   Brutalist Portfolio CSS
+   Wahyu Muliadi Siregar
+   Total Size Target: <5KB
+   ==================================== */
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* Side Navigation */
+.sidenav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 240px;
+    height: 100vh;
+    background: #000000;
+    color: #ffffff;
+    border-right: 4px solid #000000;
+    padding: 32px 24px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.nav-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+.nav-subtitle {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 32px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    border-top: 2px solid #ffffff;
+    padding-top: 24px;
+}
+
+.nav-links a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border: 2px solid #ffffff;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: none;
+}
+
+.nav-links a:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* Mobile Navigation Toggle */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    padding: 8px;
+    cursor: pointer;
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Right Info Panel */
+.info-panel {
+    position: fixed;
+    right: 32px;
+    top: 32px;
+    width: 180px;
+    z-index: 999;
+}
+
+.info-box {
+    background: #ffffff;
+    border: 3px solid #000000;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.info-box h3 {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 4px;
+}
+
+.info-box p {
+    font-size: 14px;
+    line-height: 1.3;
+    margin: 0;
+    font-weight: 700;
+}
+
+.info-box a {
+    display: block;
+    color: #0000EE;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 0;
+    border-bottom: 1px solid #000000;
+}
+
+.info-box a:last-child {
+    border-bottom: none;
+}
+
+.info-box a:hover {
+    background: #0000EE;
+    color: #ffffff;
+    padding-left: 4px;
+}
+
+/* Main Container */
+.container {
+    margin-left: 240px;
+    margin-right: 240px;
+    padding: 32px;
+    max-width: 1000px;
+}
+
+
+
+/* Main Content Sections */
+main {
+    margin-bottom: 16px;
+}
+
+section {
+    border: 3px solid #000000;
+    padding: 32px;
+    margin-bottom: 16px;
+    background: #ffffff;
+}
+
+section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 8px;
+}
+
+section p {
+    margin-bottom: 16px;
+}
+
+/* About Section with Profile Image */
+.about-container {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-top: 8px;
+}
+
+.profile-image {
+    flex-shrink: 0;
+    width: 200px;
+    border: 3px solid #000000;
+    background: #000000;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Links */
+a {
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+a:hover {
+    background: #0000EE;
+    color: #ffffff;
+}
+
+/* Skills Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+th, td {
+    border: 2px solid #000000;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #000000;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+td {
+    background: #ffffff;
+}
+
+td:first-child {
+    font-weight: 700;
+    width: 25%;
+}
+
+/* Projects */
+.project {
+    border: 2px solid #000000;
+    padding: 24px;
+    margin-bottom: 16px;
+    background: #ffffff;
+}
+
+.project:last-child {
+    margin-bottom: 0;
+}
+
+.project h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.project p {
+    margin-bottom: 12px;
+}
+
+.project strong {
+    font-weight: 700;
+}
+
+/* Certificates */
+.certificate {
+    border: 2px solid #000000;
+    padding: 24px;
+    margin-bottom: 16px;
+    background: #ffffff;
+}
+
+.certificate:last-child {
+    margin-bottom: 0;
+}
+
+.certificate h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.certificate p {
+    margin-bottom: 12px;
+}
+
+.certificate strong {
+    font-weight: 700;
+}
+
+.cert-links {
+    border-top: 2px solid #000000;
+    padding-top: 12px;
+    margin-top: 12px;
+}
+
+.cert-links a {
+    color: #000000;
+    background: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px solid #000000;
+    padding: 8px 16px;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.cert-links a:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Contact Section */
+#contact p {
+    line-height: 1.8;
+}
+
+#contact .note {
+    border-top: 2px solid #000000;
+    padding-top: 16px;
+    margin-top: 16px;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    border: 3px solid #000000;
+    padding: 24px;
+    text-align: center;
+    background: #000000;
+    color: #ffffff;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+}
+
+footer .brutalist-note {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/* Code/Technical Terms */
+code {
+    font-family: "Courier New", Courier, monospace;
+    background: #000000;
+    color: #00ff00;
+    padding: 2px 6px;
+    border: 1px solid #000000;
+}
+
+/* Certificate Preview Modal */
+.cert-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.cert-modal.active {
+    display: block;
+    animation: fadeIn 0.2s ease;
+}
+
+.cert-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.cert-modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 90vh;
+    background: #ffffff;
+    border: 4px solid #000000;
+    margin: 5vh auto;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 3px solid #000000;
+    background: #ffffff;
+    flex-shrink: 0;
+}
+
+.cert-title {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.cert-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.cert-btn {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transition: none;
+}
+
+.cert-btn:hover {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+.cert-close {
+    background: #ff0000;
+    color: #ffffff;
+    border: none;
+    font-size: 24px;
+    font-weight: 700;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+}
+
+.cert-close:hover {
+    background: #ffffff;
+    color: #ff0000;
+    border: 2px solid #ff0000;
+}
+
+.cert-image-container {
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.cert-image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid #000000;
+    background: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    cursor: grab;
+}
+
+.cert-image-container img:active {
+    cursor: grabbing;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .info-panel {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        margin: 16px 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 16px;
+    }
+
+    .info-box {
+        margin-bottom: 0;
+    }
+
+    .container {
+        margin-right: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidenav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 20px 16px;
+        border-right: none;
+        border-bottom: 4px solid #000000;
+    }
+
+    .nav-header {
+        position: relative;
+    }
+
+    .nav-header h1 {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .nav-subtitle {
+        margin-bottom: 16px;
+        font-size: 11px;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        padding-top: 16px;
+        display: none;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .nav-links.active {
+        display: grid;
+        animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .nav-links a {
+        padding: 12px 8px;
+        font-size: 11px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .info-panel {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        margin: 0;
+        padding: 16px;
+        background: #f5f5f5;
+        border-bottom: 3px solid #000000;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .info-box {
+        margin-bottom: 0;
+        padding: 12px;
+    }
+
+    .info-box h3 {
+        font-size: 10px;
+    }
+
+    .info-box p {
+        font-size: 12px;
+    }
+
+    .info-box a {
+        font-size: 11px;
+        padding: 4px 0;
+    }
+
+    .container {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 16px;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    td:first-child {
+        width: 35%;
+    }
+
+    .project {
+        padding: 16px;
+    }
+
+    .project h3 {
+        font-size: 18px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .profile-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .cert-modal-content {
+        width: 95%;
+        height: 95vh;
+        margin: 2.5vh auto;
+    }
+
+    .cert-header {
+        padding: 12px;
+    }
+
+    .cert-title {
+        font-size: 14px;
+    }
+
+    .cert-btn,
+    .cert-close {
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
+    }
+
+    .cert-controls {
+        gap: 6px;
+    }
+
+    .cert-image-container {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-header h1 {
+        font-size: 18px;
+        padding-right: 50px;
+    }
+
+    .nav-toggle {
+        top: 20px;
+        right: 12px;
+    }
+
+    .nav-links {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links.active {
+        display: grid;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        padding: 14px;
+    }
+
+    .info-panel {
+        grid-template-columns: 1fr;
+        padding: 12px;
+    }
+
+    .info-box {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 12px;
+    }
+
+    section {
+        padding: 16px;
+        margin-bottom: 12px;
+    }
+
+    section h2 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .about-container {
+        gap: 16px;
+    }
+
+    .profile-image {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    td:first-child {
+        width: 40%;
+        font-size: 11px;
+    }
+
+    .project,
+    .certificate {
+        padding: 16px;
+        margin-bottom: 12px;
+    }
+
+    .project h3,
+    .certificate h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .cert-links a {
+        display: block;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    footer {
+        padding: 16px;
+    }
+
+    footer .brutalist-note {
+        font-size: 10px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: #ffffff;
+        padding: 0;
+    }
+
+    .header {
+        position: relative;
+        top: 0;
+    }
+
+    nav {
+        display: none;
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+}

@@ -1,0 +1,23 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary Files
+*.tmp
+*.log
+
+# Large Image Files (keep originals elsewhere)
+assets/*.psd
+assets/*.ai
+assets/original/
+
+
+.github/
