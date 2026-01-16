@@ -20,6 +20,99 @@
     --shadow-hover: 12px;
 }
 
+:root.dark {
+    --bg: #101010;        /* Deep Matte Black */
+    --light: #202020;     /* Dark Grey Cards */
+    --dark: #FFFFFF;      /* Pure White Borders & Text */
+    
+    /* Neon/img-Pop Colors for Dark Mode */
+    --primary: #FFD166;   /* Vibrant Yellow */
+    --secondary: #06D6A0; /* Neon Teal */
+    --accent: #FF477E;    /* Hot Pink */
+    --blue: #118AB2;      /* Bright Blue */
+}
+
+/* Dark Mode Contrast Fixes */
+:root.dark h2,
+:root.dark .info-box h3,
+:root.dark .project strong,
+:root.dark .certificate strong,
+:root.dark .nav-links a:hover,
+:root.dark .nav-toggle,
+:root.dark .cert-header,
+:root.dark .nav-toggle.active {
+    color: #000000; /* Force black text on bright backgrounds */
+}
+
+:root.dark .nav-toggle span {
+    background: #000000; /* Force black hamburger lines on yellow button */
+}
+
+:root.dark .nav-header h1 {
+    color: #FFFFFF; /* Keep text white on accent background? Wait. */
+}
+/* nav-header h1 uses --accent background. Accent is Pink. White text on Pink is ok. Black is better? */
+:root.dark .nav-header h1 {
+    color: #000000;
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+    position: fixed;
+    bottom: 2rem; /* Bottom right to avoid nav conflicts */
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background: var(--light);
+    color: var(--dark);
+    border: 3px solid var(--dark);
+    border-radius: 50%; /* Circle button looks nice or keep square for brutalism */
+    box-shadow: 4px 4px 0 var(--dark);
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.2s;
+    z-index: 1500; /* Above everything */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Brutalist square option if preferred, but instruction didn't specify shape strictly, though standard brut is square. Let's make it square-ish */
+.theme-btn {
+    border-radius: 0; 
+}
+
+.theme-btn:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0 var(--dark);
+    background: var(--primary);
+}
+
+/* View Transitions API animation */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+    animation-name: fade-out;
+}
+
+::view-transition-new(root) {
+    animation-name: reveal;
+}
+
+@keyframes fade-out {
+    to { opacity: 0; }
+}
+
+@keyframes reveal {
+    from { clip-path: circle(0% at var(--cx) var(--cy)); }
+    to { clip-path: circle(150% at var(--cx) var(--cy)); }
+}
+
 /* Reset & Base Styles */
 * {
     margin: 0;
@@ -403,6 +496,10 @@ footer {
     z-index: 2000;
 }
 
+:root.dark .cert-modal-overlay {
+    background: rgba(16, 16, 16, 0.95); /* Dark overlay for dark mode */
+}
+
 .cert-modal {
     position: fixed;
     top: 0;
@@ -468,6 +565,19 @@ footer {
 .cert-controls button#certClose {
     background: var(--accent);
     color: var(--light);
+}
+
+/* Dark Mode Button overrides */
+:root.dark .cert-controls button {
+    color: var(--dark); /* White text on dark button */
+}
+
+:root.dark .cert-controls button:hover {
+    color: #000000; /* Black text on neon hover */
+}
+
+:root.dark .cert-controls button#certClose {
+    color: #000000; /* Black text on neon pink */
 }
 
 .cert-image-container {
