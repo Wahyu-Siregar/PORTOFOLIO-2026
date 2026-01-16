@@ -236,6 +236,17 @@ ul {
     background: var(--primary);
 }
 
+.blink-active {
+    color: #00AA00; /* Terminal green for 'Active' status */
+    animation: blink 1s steps(2, start) infinite;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+@keyframes blink {
+    to { visibility: hidden; }
+}
+
 /* Sections */
 section {
     margin-bottom: 5rem;
