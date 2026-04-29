@@ -187,8 +187,15 @@ p { font-size: 0.95rem; color: var(--text-dim); line-height: 1.7; }
 
 @media (max-width: 639px) {
     .hide-mobile { display: none; }
-    .status-block { padding: 0.6rem 1rem; }
-    .status-focus { border-right: none; }
+    .system-status-bar { flex-direction: column; }
+    .status-block { 
+        padding: 0.6rem 1rem; 
+        border-right: none; 
+        border-bottom: 1px solid var(--border); 
+        justify-content: space-between;
+    }
+    .status-block:last-child { border-bottom: none; }
+    .status-label { margin-right: 0.5rem; }
 }
 
 /* ═══ HERO ═══ */
