@@ -154,25 +154,42 @@ p { font-size: 0.95rem; color: var(--text-dim); line-height: 1.7; }
 .mobile-nav a:hover { color: var(--accent); background: var(--surface); padding-left: 2rem; }
 .mobile-nav a:last-child { border-bottom: none; }
 
-/* ═══ MARQUEE ═══ */
-.marquee-strip {
-    border-bottom: 2px solid var(--border); background: var(--surface);
-    overflow: hidden; padding: 0.7rem 0; white-space: nowrap;
+/* ═══ SYSTEM STATUS BAR ═══ */
+.system-status-bar {
+    display: flex; background: var(--bg); border-bottom: 2px solid var(--border);
+    overflow: hidden; text-transform: uppercase;
 }
 
-.marquee-track {
-    display: inline-flex; gap: 1.5rem;
-    animation: marqueeScroll 35s linear infinite;
+.status-block {
+    display: flex; align-items: center; padding: 0.6rem 1.5rem;
+    border-right: 2px solid var(--border); flex: 1; min-width: 0;
 }
 
-.marquee-track span {
-    font-family: var(--mono); font-size: 0.7rem; font-weight: 700;
-    letter-spacing: 0.15em; color: var(--text-muted);
+.status-block:last-child { border-right: none; }
+
+.status-focus { flex: 2; background: var(--surface); }
+
+.status-label {
+    font-family: var(--mono); font-size: 0.65rem; font-weight: 700;
+    color: var(--text-muted); letter-spacing: 0.15em; margin-right: 1rem;
+    white-space: nowrap;
 }
 
-.marquee-track .sep { color: var(--accent); font-size: 0.6rem; }
+.status-value {
+    font-family: var(--mono); font-size: 0.75rem; font-weight: 700;
+    color: var(--text); letter-spacing: 0.1em;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
 
-@keyframes marqueeScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.status-online { color: var(--accent-alt); }
+.blink { animation: blink 1s step-end infinite; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+@media (max-width: 639px) {
+    .hide-mobile { display: none; }
+    .status-block { padding: 0.6rem 1rem; }
+    .status-focus { border-right: none; }
+}
 
 /* ═══ HERO ═══ */
 .hero-section {

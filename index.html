@@ -73,29 +73,19 @@
         </div>
     </header>
 
-    <!-- ═══ MARQUEE ═══ -->
-    <div class="marquee-strip" aria-hidden="true">
-        <div class="marquee-track">
-            <span>CYBERSECURITY</span><span class="sep">✦</span>
-            <span>DIGITAL FORENSICS</span><span class="sep">✦</span>
-            <span>AI / MACHINE LEARNING</span><span class="sep">✦</span>
-            <span>PYTHON</span><span class="sep">✦</span>
-            <span>TENSORFLOW</span><span class="sep">✦</span>
-            <span>ESP32</span><span class="sep">✦</span>
-            <span>OSINT</span><span class="sep">✦</span>
-            <span>INDOBERT</span><span class="sep">✦</span>
-            <span>NETWORK FORENSICS</span><span class="sep">✦</span>
-            <span>PENETRATION TESTING</span><span class="sep">✦</span>
-            <span>CYBERSECURITY</span><span class="sep">✦</span>
-            <span>DIGITAL FORENSICS</span><span class="sep">✦</span>
-            <span>AI / MACHINE LEARNING</span><span class="sep">✦</span>
-            <span>PYTHON</span><span class="sep">✦</span>
-            <span>TENSORFLOW</span><span class="sep">✦</span>
-            <span>ESP32</span><span class="sep">✦</span>
-            <span>OSINT</span><span class="sep">✦</span>
-            <span>INDOBERT</span><span class="sep">✦</span>
-            <span>NETWORK FORENSICS</span><span class="sep">✦</span>
-            <span>PENETRATION TESTING</span><span class="sep">✦</span>
+    <!-- ═══ SYSTEM STATUS BAR ═══ -->
+    <div class="system-status-bar" aria-hidden="true">
+        <div class="status-block">
+            <span class="status-label">SYS.STATUS</span>
+            <span class="status-value status-online">ONLINE <span class="blink">_</span></span>
+        </div>
+        <div class="status-block status-focus">
+            <span class="status-label">CURRENT.FOCUS</span>
+            <span class="status-value" id="focusTicker">CYBERSECURITY</span>
+        </div>
+        <div class="status-block hide-mobile">
+            <span class="status-label">LOC</span>
+            <span class="status-value">RIAU, IDN</span>
         </div>
     </div>
 
@@ -596,6 +586,34 @@
                     line.style.animationDelay = (i * 0.15) + 's';
                 });
             }
+
+            /* ─── Focus Ticker ─── */
+            (function initTicker() {
+                const ticker = document.getElementById('focusTicker');
+                if (!ticker) return;
+                
+                const focuses = [
+                    "CYBERSECURITY",
+                    "DIGITAL FORENSICS",
+                    "AI / MACHINE LEARNING",
+                    "PYTHON & TENSORFLOW",
+                    "PENETRATION TESTING",
+                    "OSINT"
+                ];
+                let currentIndex = 0;
+                
+                setInterval(function() {
+                    ticker.style.opacity = '0';
+                    setTimeout(function() {
+                        currentIndex = (currentIndex + 1) % focuses.length;
+                        ticker.textContent = focuses[currentIndex];
+                        ticker.style.opacity = '1';
+                    }, 200); // Wait for fade out
+                }, 3000); // Change every 3 seconds
+
+                // Add transition for smooth fade
+                ticker.style.transition = 'opacity 0.2s ease';
+            })();
 
         })();
     </script>
