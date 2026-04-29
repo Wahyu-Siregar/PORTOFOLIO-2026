@@ -3,193 +3,385 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description"
-        content="Wahyu Muliadi Siregar — Cybersecurity, Digital Forensics & AI portfolio. Brutalist design with pastel palette.">
+        content="Wahyu Muliadi Siregar — Cybersecurity, Digital Forensics & AI portfolio. Modern brutalist design.">
     <meta name="author" content="Wahyu Muliadi Siregar">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="color-scheme" content="dark">
     <title>Wahyu Muliadi Siregar | Portfolio</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="loading-line" id="loadingLine" aria-hidden="true"></div>
+    <!-- NOISE OVERLAY -->
+    <div class="noise-overlay" aria-hidden="true"></div>
 
-    <!-- ═══ STICKY TOP NAVBAR ═══ -->
+    <!-- SCROLL PROGRESS -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- ═══ HEADER ═══ -->
     <header class="top-bar" id="home">
-        <a class="brand" href="#home">W.S</a>
-        <nav class="top-nav" aria-label="Primary navigation">
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#stats">Stats</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <a class="cta-top" href="#portfolio">Works ↓</a>
+        <div class="top-bar-inner">
+            <a class="brand" href="#home">
+                <span class="brand-block" aria-hidden="true">W.</span>
+                WAHYU SIREGAR
+            </a>
+
+            <nav class="top-nav" aria-label="Primary navigation">
+                <a href="#about">ABOUT</a>
+                <a href="#services">SERVICES</a>
+                <a href="#portfolio">WORKS</a>
+                <a href="#stats">STATS</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+
+            <a class="cta-top" href="#portfolio">VIEW WORKS →</a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+            <a href="#about" class="mobile-link">
+                <span class="mobile-link-num">01</span>
+                ABOUT
+            </a>
+            <a href="#services" class="mobile-link">
+                <span class="mobile-link-num">02</span>
+                SERVICES
+            </a>
+            <a href="#portfolio" class="mobile-link">
+                <span class="mobile-link-num">03</span>
+                WORKS
+            </a>
+            <a href="#stats" class="mobile-link">
+                <span class="mobile-link-num">04</span>
+                STATS
+            </a>
+            <a href="#contact" class="mobile-link">
+                <span class="mobile-link-num">05</span>
+                CONTACT
+            </a>
+        </div>
     </header>
 
-    <!-- ═══ MARQUEE TICKER ═══ -->
+    <!-- ═══ MARQUEE ═══ -->
     <div class="marquee-strip" aria-hidden="true">
         <div class="marquee-track">
-            <span>CYBERSECURITY</span><span>★</span>
-            <span>DIGITAL FORENSICS</span><span>★</span>
-            <span>AI / MACHINE LEARNING</span><span>★</span>
-            <span>PYTHON</span><span>★</span>
-            <span>TENSORFLOW</span><span>★</span>
-            <span>ESP32</span><span>★</span>
-            <span>OSINT</span><span>★</span>
-            <span>INDOBERT</span><span>★</span>
-            <span>NETWORK FORENSICS</span><span>★</span>
-            <span>PENETRATION TESTING</span><span>★</span>
-            <!-- duplicate for seamless loop -->
-            <span>CYBERSECURITY</span><span>★</span>
-            <span>DIGITAL FORENSICS</span><span>★</span>
-            <span>AI / MACHINE LEARNING</span><span>★</span>
-            <span>PYTHON</span><span>★</span>
-            <span>TENSORFLOW</span><span>★</span>
-            <span>ESP32</span><span>★</span>
-            <span>OSINT</span><span>★</span>
-            <span>INDOBERT</span><span>★</span>
-            <span>NETWORK FORENSICS</span><span>★</span>
-            <span>PENETRATION TESTING</span><span>★</span>
+            <span>CYBERSECURITY</span><span class="sep">✦</span>
+            <span>DIGITAL FORENSICS</span><span class="sep">✦</span>
+            <span>AI / MACHINE LEARNING</span><span class="sep">✦</span>
+            <span>PYTHON</span><span class="sep">✦</span>
+            <span>TENSORFLOW</span><span class="sep">✦</span>
+            <span>ESP32</span><span class="sep">✦</span>
+            <span>OSINT</span><span class="sep">✦</span>
+            <span>INDOBERT</span><span class="sep">✦</span>
+            <span>NETWORK FORENSICS</span><span class="sep">✦</span>
+            <span>PENETRATION TESTING</span><span class="sep">✦</span>
+            <span>CYBERSECURITY</span><span class="sep">✦</span>
+            <span>DIGITAL FORENSICS</span><span class="sep">✦</span>
+            <span>AI / MACHINE LEARNING</span><span class="sep">✦</span>
+            <span>PYTHON</span><span class="sep">✦</span>
+            <span>TENSORFLOW</span><span class="sep">✦</span>
+            <span>ESP32</span><span class="sep">✦</span>
+            <span>OSINT</span><span class="sep">✦</span>
+            <span>INDOBERT</span><span class="sep">✦</span>
+            <span>NETWORK FORENSICS</span><span class="sep">✦</span>
+            <span>PENETRATION TESTING</span><span class="sep">✦</span>
         </div>
     </div>
 
-    <!-- ═══ HERO SECTION ═══ -->
+    <!-- ═══ HERO ═══ -->
     <section id="about" class="hero-section reveal">
-        <div class="hero-photo-wrap">
-            <img class="hero-photo" src="assets/menoback.png" alt="Wahyu Muliadi Siregar portrait">
+        <div class="hero-label-strip">
+            <span class="label-tag">PORTFOLIO 2026</span>
+            <span class="label-tag">SEMESTER 8 — UIR</span>
+            <span class="label-tag">RIAU, INDONESIA</span>
         </div>
 
-        <div class="hero-copy">
-            <p class="eyebrow">Portfolio 2026</p>
-            <h1>Wahyu Muliadi<br>Siregar</h1>
-            <p class="hero-tagline">Brutalist structure with a friendly pastel identity.</p>
-            <p class="hero-description">
-                I am an 8th semester Computer Science student at Universitas Islam Riau.
-                I build practical security solutions with strong technical foundations and clear communication.
-            </p>
-            <div class="hero-actions">
-                <a class="btn btn-primary" href="#portfolio">See My Works</a>
-                <a class="btn btn-secondary" href="#contact">Let's Collaborate</a>
+        <div class="hero-grid">
+            <div class="hero-copy">
+                <h1>
+                    <span class="hero-line">WAHYU</span>
+                    <span class="hero-line hero-line-outline">MULIADI</span>
+                    <span class="hero-line">SIREGAR</span>
+                </h1>
+                <p class="hero-tagline">Building practical security solutions<br>with clear communication.</p>
+            </div>
+
+            <div class="hero-photo-wrap">
+                <img class="hero-photo" src="assets/menoback.png" alt="Wahyu Muliadi Siregar portrait" width="400"
+                    height="500" decoding="async" fetchpriority="high">
+                <div class="hero-photo-label">
+                    <span>CYBERSECURITY</span>
+                    <span>FORENSICS</span>
+                    <span>AI</span>
+                </div>
             </div>
         </div>
 
-        <!-- Tag pills — Quick Facts + Core Stack -->
+        <div class="hero-description-block">
+            <div class="hero-desc-line" aria-hidden="true"></div>
+            <p class="hero-description">
+                I am an 8th semester Computer Science student at Universitas Islam Riau.
+                My work bridges cybersecurity, digital forensics, and AI-driven analysis.
+            </p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="#portfolio">SEE MY WORKS →</a>
+                <a class="btn btn-secondary" href="#contact">LET'S COLLABORATE</a>
+            </div>
+        </div>
+
         <div class="tag-strip">
-            <span class="tag-pill tone-lavender panel">Semester 8 — UIR</span>
-            <span class="tag-pill tone-mint panel">Riau, Indonesia</span>
-            <span class="tag-pill tone-pink panel">Cybersecurity & Forensics</span>
-            <span class="tag-pill tone-peach panel">Python / TensorFlow</span>
-            <span class="tag-pill tone-lavender panel">Network Forensics & OSINT</span>
-            <span class="tag-pill tone-mint panel">ESP32 & Embedded</span>
+            <span class="tag-pill">CYBERSECURITY</span>
+            <span class="tag-pill">PYTHON / TENSORFLOW</span>
+            <span class="tag-pill">NETWORK FORENSICS</span>
+            <span class="tag-pill">ESP32 & EMBEDDED</span>
+            <span class="tag-pill">OSINT</span>
+            <span class="tag-pill">INDOBERT</span>
         </div>
     </section>
 
     <!-- ═══ SERVICES ═══ -->
     <section id="services" class="section reveal">
-        <div class="section-head panel tone-peach">
-            <p class="section-kicker">What I Do</p>
-            <h2>Services</h2>
+        <div class="section-header">
+            <span class="section-num">01</span>
+            <span class="section-kicker">WHAT I DO</span>
+            <h2>SERVICES FOCUSED ON SECURITY, FORENSICS, AND INTELLIGENT SYSTEMS.</h2>
         </div>
 
-        <div class="bento-services">
-            <article class="service-card panel tone-lavender bento-wide">
-                <p class="service-index">01</p>
+        <div class="services-grid">
+            <article class="service-item reveal">
+                <div class="service-top">
+                    <p class="service-num">01</p>
+                    <div class="service-corner" aria-hidden="true">↗</div>
+                </div>
                 <h3>Cybersecurity Assessment</h3>
                 <p>Penetration testing, SQL injection analysis, XSS testing, and OSINT-based risk review.</p>
+                <div class="service-tags">
+                    <span>PENTEST</span>
+                    <span>OSINT</span>
+                    <span>XSS</span>
+                </div>
             </article>
 
-            <article class="service-card panel tone-mint">
-                <p class="service-index">02</p>
+            <article class="service-item reveal">
+                <div class="service-top">
+                    <p class="service-num">02</p>
+                    <div class="service-corner" aria-hidden="true">↗</div>
+                </div>
                 <h3>Digital Forensics</h3>
                 <p>Evidence collection, artifact inspection, and structured incident analysis workflows.</p>
+                <div class="service-tags">
+                    <span>EVIDENCE</span>
+                    <span>ANALYSIS</span>
+                    <span>INCIDENT</span>
+                </div>
             </article>
 
-            <article class="service-card panel tone-pink">
-                <p class="service-index">03</p>
+            <article class="service-item reveal">
+                <div class="service-top">
+                    <p class="service-num">03</p>
+                    <div class="service-corner" aria-hidden="true">↗</div>
+                </div>
                 <h3>AI-Driven Analysis</h3>
                 <p>Machine learning prototypes using TensorFlow, Keras, and IndoBERT for security insights.</p>
+                <div class="service-tags">
+                    <span>TENSORFLOW</span>
+                    <span>KERAS</span>
+                    <span>INDOBERT</span>
+                </div>
             </article>
 
-            <article class="service-card panel tone-peach bento-wide">
-                <p class="service-index">04</p>
+            <article class="service-item reveal">
+                <div class="service-top">
+                    <p class="service-num">04</p>
+                    <div class="service-corner" aria-hidden="true">↗</div>
+                </div>
                 <h3>IoT Security Prototyping</h3>
                 <p>ESP32-based monitoring prototypes and secure telemetry pipeline experimentation.</p>
+                <div class="service-tags">
+                    <span>ESP32</span>
+                    <span>TELEMETRY</span>
+                    <span>IoT</span>
+                </div>
             </article>
         </div>
     </section>
 
     <!-- ═══ PORTFOLIO ═══ -->
     <section id="portfolio" class="section reveal">
-        <div class="section-head panel tone-mint">
-            <p class="section-kicker">Recent Works</p>
-            <h2>Portfolio Showcase</h2>
+        <div class="section-header">
+            <span class="section-num">02</span>
+            <span class="section-kicker">RECENT WORKS</span>
+            <h2>SELECTED PROJECTS IN CYBERSECURITY AND INTELLIGENT SYSTEMS.</h2>
         </div>
 
-        <div class="bento-portfolio">
-            <article class="portfolio-card panel bento-featured">
-                <div class="tape-accent tone-lavender"></div>
-                <p class="project-meta">RESEARCH PROJECT</p>
-                <h3>Cybersecurity Research Pipeline</h3>
-                <p>End-to-end security research workflow combining data analysis, threat modeling, and automated
-                    reporting.</p>
-                <p class="project-tags">Python — Security Tools — Automation</p>
+        <div class="portfolio-grid">
+            <!-- FEATURED: SmartDiscover -->
+            <article class="portfolio-item portfolio-featured reveal" id="smartdiscover">
+                <div class="portfolio-visual portfolio-visual-featured">
+                    <img src="assets/smartdiscover-cover.png"
+                        alt="SmartDiscover — Multi-agent AI music discovery assistant" loading="lazy">
+                    <span class="portfolio-index">★</span>
+                    <span class="portfolio-featured-badge">FEATURED PROJECT</span>
+                </div>
+                <div class="portfolio-body">
+                    <div class="portfolio-meta">
+                        <span class="portfolio-type">AI / MULTI-AGENT SYSTEM</span>
+                        <span class="portfolio-year">2026</span>
+                    </div>
+                    <h3>SmartDiscover — AI Music Discovery</h3>
+                    <p>Multi-agent AI music discovery assistant that turns natural-language mood prompts into ranked
+                        Spotify recommendations and one-click playlist creation. Built with a 4-agent pipeline:
+                        Profiler → Spotify Search → Filter & Ranker → Presenter.</p>
+                    <div class="portfolio-tags">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>Spotify API</span>
+                        <span>OpenRouter</span>
+                        <span>Multi-Agent</span>
+                        <span>LLM</span>
+                    </div>
+                    <div class="portfolio-links">
+                        <a href="https://smart-discover.vercel.app" target="_blank" rel="noopener noreferrer"
+                            class="portfolio-link">LIVE DEMO →</a>
+                        <a href="https://github.com/Wahyu-Siregar/SmartDiscover" target="_blank"
+                            rel="noopener noreferrer" class="portfolio-link portfolio-link-secondary">GITHUB ↗</a>
+                    </div>
+                </div>
             </article>
 
-            <article class="portfolio-card panel">
-                <div class="tape-accent tone-mint"></div>
-                <p class="project-meta">WEB PLATFORM</p>
-                <h3>Batak Family Heritage and Genealogy Platform</h3>
-                <p>Cultural preservation system with searchable family lineage data and clean information flow.</p>
-                <p class="project-tags">PHP — JavaScript — SQL</p>
+            <article class="portfolio-item reveal">
+                <div class="portfolio-visual">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop"
+                        alt="Cybersecurity abstract" loading="lazy">
+                    <span class="portfolio-index">02</span>
+                </div>
+                <div class="portfolio-body">
+                    <div class="portfolio-meta">
+                        <span class="portfolio-type">RESEARCH PROJECT</span>
+                        <span class="portfolio-year">2026</span>
+                    </div>
+                    <h3>Cybersecurity Research Pipeline</h3>
+                    <p>End-to-end security research workflow combining data analysis, threat modeling, and automated
+                        reporting.</p>
+                    <div class="portfolio-tags">
+                        <span>Python</span>
+                        <span>Security Tools</span>
+                        <span>Automation</span>
+                    </div>
+                </div>
             </article>
 
-            <article class="portfolio-card panel">
-                <div class="tape-accent tone-pink"></div>
-                <p class="project-meta">NLP RESEARCH</p>
-                <h3>IndoBERT Sentiment Analysis</h3>
-                <p>Indonesian text sentiment pipeline for classification experiments and practical analysis.</p>
-                <p class="project-tags">IndoBERT — Keras — Colab</p>
+            <article class="portfolio-item reveal">
+                <div class="portfolio-visual">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop"
+                        alt="Web platform" loading="lazy">
+                    <span class="portfolio-index">03</span>
+                </div>
+                <div class="portfolio-body">
+                    <div class="portfolio-meta">
+                        <span class="portfolio-type">WEB PLATFORM</span>
+                        <span class="portfolio-year">2025</span>
+                    </div>
+                    <h3>Batak Family Heritage Platform</h3>
+                    <p>Cultural preservation system with searchable family lineage data and clean information flow.</p>
+                    <div class="portfolio-tags">
+                        <span>PHP</span>
+                        <span>JavaScript</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
             </article>
 
-            <article class="portfolio-card panel">
-                <div class="tape-accent tone-peach"></div>
-                <p class="project-meta">EMBEDDED SYSTEM</p>
-                <h3>ESP32 IoT Monitoring Prototypes</h3>
-                <p>Realtime sensor data prototypes for telemetry and security-oriented embedded workflows.</p>
-                <p class="project-tags">ESP32 — C/C++ — Arduino</p>
+            <article class="portfolio-item reveal">
+                <div class="portfolio-visual">
+                    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&h=400&fit=crop"
+                        alt="NLP research" loading="lazy">
+                    <span class="portfolio-index">04</span>
+                </div>
+                <div class="portfolio-body">
+                    <div class="portfolio-meta">
+                        <span class="portfolio-type">NLP RESEARCH</span>
+                        <span class="portfolio-year">2025</span>
+                    </div>
+                    <h3>IndoBERT Sentiment Analysis</h3>
+                    <p>Indonesian text sentiment pipeline for classification experiments and practical analysis.</p>
+                    <div class="portfolio-tags">
+                        <span>IndoBERT</span>
+                        <span>Keras</span>
+                        <span>Colab</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="portfolio-item reveal">
+                <div class="portfolio-visual">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop"
+                        alt="Embedded system" loading="lazy">
+                    <span class="portfolio-index">05</span>
+                </div>
+                <div class="portfolio-body">
+                    <div class="portfolio-meta">
+                        <span class="portfolio-type">EMBEDDED SYSTEM</span>
+                        <span class="portfolio-year">2025</span>
+                    </div>
+                    <h3>ESP32 IoT Monitoring Prototypes</h3>
+                    <p>Realtime sensor data prototypes for telemetry and security-oriented embedded workflows.</p>
+                    <div class="portfolio-tags">
+                        <span>ESP32</span>
+                        <span>C/C++</span>
+                        <span>Arduino</span>
+                    </div>
+                </div>
             </article>
         </div>
 
         <div class="credential-strip">
-            <button class="credential-item" data-cert="certificates/CyberOpsAssociate.pdf">Cisco CyberOps
-                Associate</button>
-            <button class="credential-item" data-cert="certificates/IntroductionsToNetwroksCourse.pdf">Introduction to
-                Networks</button>
+            <button class="credential-item" data-cert="certificates/CyberOpsAssociate.pdf">
+                <span class="cred-icon">⬡</span>
+                CISCO CYBEROPS ASSOCIATE
+            </button>
+            <button class="credential-item" data-cert="certificates/IntroductionsToNetwroksCourse.pdf">
+                <span class="cred-icon">⬡</span>
+                INTRODUCTION TO NETWORKS
+            </button>
         </div>
     </section>
 
     <!-- ═══ STATS ═══ -->
     <section id="stats" class="section reveal">
-        <div class="section-head panel tone-pink">
-            <p class="section-kicker">Trust Indicators</p>
-            <h2>Stats</h2>
+        <div class="section-header">
+            <span class="section-num">03</span>
+            <span class="section-kicker">TRUST INDICATORS</span>
+            <h2>NUMBERS THAT REFLECT DEDICATION.</h2>
         </div>
 
-        <div class="stats-row">
-            <article class="stat-card panel tone-lavender">
+        <div class="stats-grid">
+            <article class="stat-item reveal">
                 <p class="stat-value">4+</p>
+                <div class="stat-divider"></div>
                 <p class="stat-label">Active research projects in cybersecurity domains.</p>
             </article>
 
-            <article class="stat-card panel tone-mint">
+            <article class="stat-item reveal">
                 <p class="stat-value">60+</p>
+                <div class="stat-divider"></div>
                 <p class="stat-label">Security and analysis lab sessions completed.</p>
             </article>
 
-            <article class="stat-card panel tone-peach">
+            <article class="stat-item reveal">
                 <p class="stat-value">10+</p>
+                <div class="stat-divider"></div>
                 <p class="stat-label">Learning milestones across cybersecurity domains.</p>
             </article>
         </div>
@@ -197,30 +389,44 @@
 
     <!-- ═══ CONTACT ═══ -->
     <section id="contact" class="section reveal">
-        <div class="section-head panel tone-lavender">
-            <p class="section-kicker">Contact</p>
-            <h2>Let's build practical security solutions</h2>
+        <div class="section-header">
+            <span class="section-num">04</span>
+            <span class="section-kicker">CONTACT</span>
+            <h2>LET'S BUILD PRACTICAL SECURITY SOLUTIONS TOGETHER.</h2>
         </div>
 
-        <div class="contact-panel panel tone-mint">
-            <p>
+        <div class="contact-wrap">
+            <p class="contact-desc">
                 Open to collaboration on cybersecurity research, digital forensics projects,
-                and AI-enhanced security workflows.
+                and AI-enhanced security workflows. Reach out and let's discuss your next project.
             </p>
 
             <div class="contact-links">
-                <a href="mailto:wahyumuliadisiregar@gmail.com">Email</a>
-                <a href="https://github.com/Wahyusrg0819" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="mailto:wahyumuliadisiregar@gmail.com" class="contact-link">
+                    <span class="contact-link-label">EMAIL</span>
+                    <span class="contact-link-value">wahyumuliadisiregar@gmail.com</span>
+                    <span class="contact-link-arrow">→</span>
+                </a>
+                <a href="https://github.com/Wahyusrg0819" target="_blank" rel="noopener noreferrer"
+                    class="contact-link">
+                    <span class="contact-link-label">GITHUB</span>
+                    <span class="contact-link-value">Wahyusrg0819</span>
+                    <span class="contact-link-arrow">→</span>
+                </a>
                 <a href="https://www.linkedin.com/in/wahyu-muliadi-siregar-7971a139a" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a>
+                    rel="noopener noreferrer" class="contact-link">
+                    <span class="contact-link-label">LINKEDIN</span>
+                    <span class="contact-link-value">wahyu-muliadi-siregar</span>
+                    <span class="contact-link-arrow">→</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- ═══ CERTIFICATE MODAL ═══ -->
+    <!-- ═══ MODAL ═══ -->
     <div class="cert-modal" id="certModal" aria-hidden="true">
         <div class="cert-modal-backdrop" id="certBackdrop"></div>
-        <div class="cert-modal-content panel">
+        <div class="cert-modal-content">
             <div class="cert-modal-header">
                 <p class="cert-modal-title" id="certTitle">Certificate</p>
                 <button class="cert-modal-close" id="certClose" aria-label="Close">✕</button>
@@ -231,26 +437,48 @@
 
     <!-- ═══ FOOTER ═══ -->
     <footer class="site-footer">
-        <p>Copyright <span id="year"></span> Wahyu Muliadi Siregar. All rights reserved.</p>
+        <div class="footer-inner">
+            <div class="footer-left">
+                <p class="footer-brand">W. SIREGAR</p>
+                <p class="footer-copy">© <span id="year"></span> WAHYU MULIADI SIREGAR</p>
+            </div>
+            <div class="footer-right">
+                <p>ALL RIGHTS RESERVED</p>
+                <p>CYBERSECURITY · FORENSICS · AI</p>
+            </div>
+        </div>
     </footer>
 
     <script>
         (function () {
-            /* Year */
+            'use strict';
+
+            /* ─── Utils ─── */
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            /* ─── Year ─── */
             const yearEl = document.getElementById('year');
             if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-            /* Loading line */
-            const loadingLine = document.getElementById('loadingLine');
-            window.addEventListener('load', function () {
-                if (!loadingLine) return;
-                loadingLine.classList.add('is-done');
-                setTimeout(function () {
-                    if (loadingLine.parentNode) loadingLine.parentNode.removeChild(loadingLine);
-                }, 360);
-            });
+            /* ─── Scroll Progress Bar ─── */
+            const scrollProgress = document.getElementById('scrollProgress');
+            if (scrollProgress && !prefersReducedMotion) {
+                let ticking = false;
+                window.addEventListener('scroll', function () {
+                    if (!ticking) {
+                        requestAnimationFrame(function () {
+                            const scrollTop = window.scrollY;
+                            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                            scrollProgress.style.width = progress + '%';
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                }, { passive: true });
+            }
 
-            /* Scroll reveal */
+            /* ─── Scroll Reveal ─── */
             const revealItems = document.querySelectorAll('.reveal');
             if ('IntersectionObserver' in window) {
                 const obs = new IntersectionObserver(function (entries, observer) {
@@ -260,21 +488,33 @@
                             observer.unobserve(entry.target);
                         }
                     });
-                }, { threshold: 0.15 });
+                }, { threshold: 0.08 });
                 revealItems.forEach(function (el) { obs.observe(el); });
             } else {
                 revealItems.forEach(function (el) { el.classList.add('is-visible'); });
             }
 
-            /* Top-bar shadow on scroll */
-            const topBar = document.querySelector('.top-bar');
-            if (topBar) {
-                window.addEventListener('scroll', function () {
-                    topBar.classList.toggle('is-scrolled', window.scrollY > 20);
-                }, { passive: true });
+            /* ─── Mobile Menu ─── */
+            const menuBtn = document.getElementById('menuBtn');
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                const isOpen = menuBtn.classList.toggle('is-open');
+                mobileNav.classList.toggle('is-open');
+                menuBtn.setAttribute('aria-expanded', isOpen);
+                mobileNav.setAttribute('aria-hidden', !isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
             }
 
-            /* Certificate modal */
+            if (menuBtn && mobileNav) {
+                menuBtn.addEventListener('click', toggleMenu);
+                mobileLinks.forEach(function (link) {
+                    link.addEventListener('click', toggleMenu);
+                });
+            }
+
+            /* ─── Certificate Modal ─── */
             var modal = document.getElementById('certModal');
             var frame = document.getElementById('certFrame');
             var titleEl = document.getElementById('certTitle');
@@ -297,14 +537,66 @@
 
             document.querySelectorAll('[data-cert]').forEach(function (btn) {
                 btn.addEventListener('click', function () {
-                    openCert(btn.getAttribute('data-cert'), btn.textContent);
+                    openCert(btn.getAttribute('data-cert'), btn.textContent.trim());
                 });
             });
-            closeBtn.addEventListener('click', closeCert);
-            backdrop.addEventListener('click', closeCert);
+            if (closeBtn) closeBtn.addEventListener('click', closeCert);
+            if (backdrop) backdrop.addEventListener('click', closeCert);
             document.addEventListener('keydown', function (e) {
                 if (e.key === 'Escape' && modal.classList.contains('is-open')) closeCert();
             });
+
+            /* ─── Active Nav on Scroll ─── */
+            (function initActiveNav() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('.top-nav a');
+
+                if (!sections.length || !navLinks.length) return;
+
+                let ticking = false;
+                window.addEventListener('scroll', function () {
+                    if (!ticking) {
+                        requestAnimationFrame(function () {
+                            let current = '';
+                            sections.forEach(function (section) {
+                                const sectionTop = section.offsetTop - 120;
+                                if (window.scrollY >= sectionTop) {
+                                    current = section.getAttribute('id');
+                                }
+                            });
+
+                            navLinks.forEach(function (link) {
+                                link.classList.remove('active');
+                                if (link.getAttribute('href') === '#' + current) {
+                                    link.classList.add('active');
+                                }
+                            });
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                }, { passive: true });
+            })();
+
+            /* ─── Hover distortion on service/portfolio cards ─── */
+            const allCards = document.querySelectorAll('.service-item, .portfolio-item');
+            allCards.forEach(function (card) {
+                card.addEventListener('mouseenter', function () {
+                    card.style.transform = 'translate(' + (Math.random() * 4 - 2) + 'px, -4px)';
+                });
+                card.addEventListener('mouseleave', function () {
+                    card.style.transform = '';
+                });
+            });
+
+            /* ─── Glitch text effect on hero ─── */
+            if (!prefersReducedMotion) {
+                const heroLines = document.querySelectorAll('.hero-line');
+                heroLines.forEach(function (line, i) {
+                    line.style.animationDelay = (i * 0.15) + 's';
+                });
+            }
+
         })();
     </script>
 </body>
