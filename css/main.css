@@ -1,0 +1,9 @@
+/* ============================================================
+   main.css — Entry point
+   Neubrutalism Portfolio 2026
+   Import order matters: base → layout → components
+   ============================================================ */
+
+@import url("base.css");
+@import url("layout.css");
+@import url("components.css");

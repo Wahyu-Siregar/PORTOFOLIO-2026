@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description"
-        content="Wahyu Muliadi Siregar — Cybersecurity, Digital Forensics & AI portfolio. Modern brutalist design.">
+        content="Wahyu Muliadi Siregar — Cybersecurity, Digital Forensics & AI portfolio. Neubrutalism design 2026.">
     <meta name="author" content="Wahyu Muliadi Siregar">
-    <meta name="theme-color" content="#0a0a0a">
-    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#f5f1e8">
+    <meta name="color-scheme" content="light">
     <title>Wahyu Muliadi Siregar | Portfolio</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="assets/menoback.webp" fetchpriority="high">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;900&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <!-- NOISE OVERLAY -->
-    <div class="noise-overlay" aria-hidden="true"></div>
-
     <!-- SCROLL PROGRESS -->
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
@@ -35,8 +35,9 @@
             <nav class="top-nav" aria-label="Primary navigation">
                 <a href="#about">ABOUT</a>
                 <a href="#services">SERVICES</a>
+                <a href="#skills">SKILLS</a>
                 <a href="#portfolio">WORKS</a>
-                <a href="#stats">STATS</a>
+                <a href="#timeline">JOURNEY</a>
                 <a href="#contact">CONTACT</a>
             </nav>
 
@@ -51,33 +52,34 @@
 
         <div class="mobile-nav" id="mobileNav" aria-hidden="true">
             <a href="#about" class="mobile-link">
-                <span class="mobile-link-num">01</span>
-                ABOUT
+                <span class="mobile-link-num">01</span> ABOUT
             </a>
             <a href="#services" class="mobile-link">
-                <span class="mobile-link-num">02</span>
-                SERVICES
+                <span class="mobile-link-num">02</span> SERVICES
+            </a>
+            <a href="#skills" class="mobile-link">
+                <span class="mobile-link-num">03</span> SKILLS
             </a>
             <a href="#portfolio" class="mobile-link">
-                <span class="mobile-link-num">03</span>
-                WORKS
+                <span class="mobile-link-num">04</span> WORKS
             </a>
-            <a href="#stats" class="mobile-link">
-                <span class="mobile-link-num">04</span>
-                STATS
+            <a href="#timeline" class="mobile-link">
+                <span class="mobile-link-num">05</span> JOURNEY
+            </a>
+            <a href="#credentials" class="mobile-link">
+                <span class="mobile-link-num">06</span> CERTS
             </a>
             <a href="#contact" class="mobile-link">
-                <span class="mobile-link-num">05</span>
-                CONTACT
+                <span class="mobile-link-num">07</span> CONTACT
             </a>
         </div>
     </header>
 
-    <!-- ═══ SYSTEM STATUS BAR ═══ -->
+    <!-- ═══ SYSTEM STATUS STRIP ═══ -->
     <div class="system-status-bar" aria-hidden="true">
         <div class="status-block">
             <span class="status-label">SYS.STATUS</span>
-            <span class="status-value status-online">ONLINE <span class="blink">_</span></span>
+            <span class="status-value status-online">ONLINE</span>
         </div>
         <div class="status-block status-focus">
             <span class="status-label">CURRENT.FOCUS</span>
@@ -87,56 +89,122 @@
             <span class="status-label">LOC</span>
             <span class="status-value">RIAU, IDN</span>
         </div>
+        <div class="status-block hide-mobile">
+            <span class="status-label">YR</span>
+            <span class="status-value">2026</span>
+        </div>
     </div>
 
-    <!-- ═══ HERO ═══ -->
+    <!-- ═══ HERO BENTO ═══ -->
     <section id="about" class="hero-section reveal">
         <div class="hero-label-strip">
             <span class="label-tag">PORTFOLIO 2026</span>
             <span class="label-tag">SEMESTER 8 — UIR</span>
-            <span class="label-tag">RIAU, INDONESIA</span>
+            <span class="label-tag">OPEN TO COLLAB</span>
         </div>
 
-        <div class="hero-grid">
-            <div class="hero-copy">
+        <div class="hero-bento">
+            <!-- NAME -->
+            <div class="bento-cell bento-name">
                 <h1>
                     <span class="hero-line">WAHYU</span>
                     <span class="hero-line hero-line-outline">MULIADI</span>
                     <span class="hero-line">SIREGAR</span>
                 </h1>
-                <p class="hero-tagline">Building practical security solutions<br>with clear communication.</p>
             </div>
 
-            <div class="hero-photo-wrap">
-                <img class="hero-photo" src="assets/menoback.webp" alt="Wahyu Muliadi Siregar portrait" width="400"
-                    height="500" decoding="async" fetchpriority="high">
-                <div class="hero-photo-label">
-                    <span>CYBERSECURITY</span>
+            <!-- PHOTO -->
+            <div class="bento-cell bento-photo">
+                <img src="assets/menoback.webp" alt="Wahyu Muliadi Siregar portrait" width="400" height="500"
+                    decoding="async" fetchpriority="high" loading="eager">
+                <div class="photo-stamp">
+                    <span>CYBERSEC</span>
+                    <span>· AI ·</span>
                     <span>FORENSICS</span>
-                    <span>AI</span>
+                </div>
+            </div>
+
+            <!-- TAGLINE + CTA -->
+            <div class="bento-cell bento-tagline">
+                <p class="tagline-text">Building practical security solutions with clear communication.</p>
+                <div class="tagline-actions">
+                    <a class="btn btn-primary" href="#portfolio">SEE MY WORKS →</a>
+                    <a class="btn btn-secondary" href="#contact">LET'S COLLAB</a>
+                </div>
+            </div>
+
+            <!-- NOW WORKING ON -->
+            <div class="bento-cell bento-now">
+                <span class="bento-label">NOW WORKING ON</span>
+                <p class="bento-value">
+                    <span class="now-dot" aria-hidden="true"></span>
+                    SMARTDISCOVER — MULTI-AGENT AI MUSIC
+                </p>
+            </div>
+
+            <!-- QUICK FACTS -->
+            <div class="bento-cell bento-quickfacts">
+                <span class="bento-label">QUICK FACTS</span>
+                <ul class="quickfact-list">
+                    <li><span>Role</span><span>CS Student</span></li>
+                    <li><span>Semester</span><span>08 / UIR</span></li>
+                    <li><span>Focus</span><span>Sec · AI · IoT</span></li>
+                    <li><span>Base</span><span>Riau, IDN</span></li>
+                </ul>
+            </div>
+
+            <!-- SOCIALS -->
+            <div class="bento-cell bento-socials">
+                <span class="bento-label">CHANNELS</span>
+                <div class="socials-row">
+                    <a class="social-btn" href="mailto:wahyumuliadisiregar@gmail.com">✉ EMAIL</a>
+                    <a class="social-btn" href="https://github.com/Wahyusrg0819" target="_blank"
+                        rel="noopener noreferrer">◆ GITHUB</a>
+                    <a class="social-btn" href="https://www.linkedin.com/in/wahyu-muliadi-siregar-7971a139a"
+                        target="_blank" rel="noopener noreferrer">▸ LINKEDIN</a>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="hero-description-block">
-            <div class="hero-desc-line" aria-hidden="true"></div>
-            <p class="hero-description">
-                I am an 8th semester Computer Science student at Universitas Islam Riau.
-                My work bridges cybersecurity, digital forensics, and AI-driven analysis.
-            </p>
-            <div class="hero-actions">
-                <a class="btn btn-primary" href="#portfolio">SEE MY WORKS →</a>
-                <a class="btn btn-secondary" href="#contact">LET'S COLLABORATE</a>
-            </div>
+    <!-- ═══ ABOUT NARRATIVE ═══ -->
+    <section class="section reveal" aria-label="About">
+        <div class="section-header">
+            <span class="section-num">00</span>
+            <span class="section-kicker">ABOUT ME</span>
+            <h2>A COMPUTER SCIENCE STUDENT WITH A BIAS FOR PRACTICAL SECURITY.</h2>
         </div>
 
-        <div class="tag-strip">
-            <span class="tag-pill">CYBERSECURITY</span>
-            <span class="tag-pill">PYTHON / TENSORFLOW</span>
-            <span class="tag-pill">NETWORK FORENSICS</span>
-            <span class="tag-pill">ESP32 & EMBEDDED</span>
-            <span class="tag-pill">OSINT</span>
-            <span class="tag-pill">INDOBERT</span>
+        <div class="about-narrative">
+            <div class="about-text">
+                <p>
+                    I'm an <span class="highlight">8th semester Computer Science student</span> at Universitas
+                    Islam Riau. My work sits at the intersection of <span class="highlight">cybersecurity</span>,
+                    <span class="highlight">digital forensics</span>, and <span class="highlight">AI-driven
+                        analysis</span> — with a clear preference for shipping something usable over shipping
+                    something clever.
+                </p>
+                <p>
+                    I enjoy breaking things down into the smallest practical problem, prototyping fast, and
+                    writing reports that non-engineers can actually read. Most recent obsession: multi-agent
+                    systems for real-world tasks and secure telemetry for embedded devices.
+                </p>
+                <p>
+                    When I'm not shipping, I'm usually reading about OSINT case studies, tinkering with
+                    ESP32 boards, or helping classmates untangle SQL queries.
+                </p>
+            </div>
+
+            <aside class="about-aside">
+                <h3>PRINCIPLES</h3>
+                <ul>
+                    <li>Ship working prototypes early</li>
+                    <li>Explain security in plain language</li>
+                    <li>Default to transparency</li>
+                    <li>Automate the boring parts</li>
+                    <li>Measure before you optimize</li>
+                </ul>
+            </aside>
         </div>
     </section>
 
@@ -155,7 +223,8 @@
                     <div class="service-corner" aria-hidden="true">↗</div>
                 </div>
                 <h3>Cybersecurity Assessment</h3>
-                <p>Penetration testing, SQL injection analysis, XSS testing, and OSINT-based risk review.</p>
+                <p>Penetration testing, SQL injection analysis, XSS testing, and OSINT-based risk review for small
+                    projects and academic labs.</p>
                 <div class="service-tags">
                     <span>PENTEST</span>
                     <span>OSINT</span>
@@ -169,7 +238,8 @@
                     <div class="service-corner" aria-hidden="true">↗</div>
                 </div>
                 <h3>Digital Forensics</h3>
-                <p>Evidence collection, artifact inspection, and structured incident analysis workflows.</p>
+                <p>Evidence collection, artifact inspection, and structured incident analysis workflows with
+                    clear, reproducible reports.</p>
                 <div class="service-tags">
                     <span>EVIDENCE</span>
                     <span>ANALYSIS</span>
@@ -183,7 +253,8 @@
                     <div class="service-corner" aria-hidden="true">↗</div>
                 </div>
                 <h3>AI-Driven Analysis</h3>
-                <p>Machine learning prototypes using TensorFlow, Keras, and IndoBERT for security insights.</p>
+                <p>Machine learning prototypes using TensorFlow, Keras, and IndoBERT to extract practical security
+                    insights from noisy data.</p>
                 <div class="service-tags">
                     <span>TENSORFLOW</span>
                     <span>KERAS</span>
@@ -197,7 +268,8 @@
                     <div class="service-corner" aria-hidden="true">↗</div>
                 </div>
                 <h3>IoT Security Prototyping</h3>
-                <p>ESP32-based monitoring prototypes and secure telemetry pipeline experimentation.</p>
+                <p>ESP32-based monitoring prototypes and secure telemetry pipeline experimentation for
+                    lightweight embedded environments.</p>
                 <div class="service-tags">
                     <span>ESP32</span>
                     <span>TELEMETRY</span>
@@ -207,10 +279,120 @@
         </div>
     </section>
 
+    <!-- ═══ SKILLS / TECH STACK ═══ -->
+    <section id="skills" class="section reveal">
+        <div class="section-header">
+            <span class="section-num">02</span>
+            <span class="section-kicker">TECH STACK</span>
+            <h2>TOOLS & LANGUAGES I REACH FOR FIRST.</h2>
+        </div>
+
+        <div class="skills-wrap">
+            <div class="skill-group">
+                <h3>SECURITY</h3>
+                <div class="skills-grid">
+                    <article class="skill-item">
+                        <span class="skill-cat">Pentest</span>
+                        <span class="skill-name">Burp Suite</span>
+                        <span class="skill-level level-int">Intermediate</span>
+                    </article>
+                    <article class="skill-item">
+                        <span class="skill-cat">Recon</span>
+                        <span class="skill-name">Nmap</span>
+                        <span class="skill-level level-adv">Advanced</span>
+                    </article>
+                    <article class="skill-item">
+                        <span class="skill-cat">OSINT</span>
+                        <span class="skill-name">Maltego / theHarvester</span>
+                        <span class="skill-level level-int">Intermediate</span>
+                    </article>
+                    <article class="skill-item">
+                        <span class="skill-cat">Forensics</span>
+                        <span class="skill-name">Autopsy / Wireshark</span>
+                        <span class="skill-level level-int">Intermediate</span>
+                    </article>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <h3>AI / ML</h3>
+                <div class="skills-grid">
+                    <article class="skill-item">
+                        <span class="skill-cat">Language</span>
+                        <span class="skill-name">Python</span>
+                        <span class="skill-level level-adv">Advanced</span>
+                    </article>
+                    <article class="skill-item">
+                        <span class="skill-cat">Framework</span>
+                        <span class="skill-name">TensorFlow / Keras</span>
+                        <span class="skill-level level-int">Intermediate</span>
+                    </article>
+                    <article class="skill-item">
+                        <span class="skill-cat">NLP</span>
+                        <span class="skill-name">IndoBERT</span>
+                        <span class="skill-level level-int">Intermediate</span>
+                    </article>
+                    <article class="skill-item">
+                        <span class="skill-cat">LLM Ops</span>
+                        <span class="skill-name">OpenRouter / FastAPI</span>
+                        <span class="skill-level level-learn">Learning</span>
+                    </article>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <h3>EMBEDDED</h3>
+                <div class="skills-grid">
+                    <article class="skill-item">
+                        <span class="skill-cat">Microcontroller</span>
+                        <span class="skill-name">ESP32</span>
+                        <span class="skill-level level-int">Intermediate</span>
+                    </article>
+                    <article class="skill-item">
+                        <span class="skill-cat">Language</span>
+                        <span class="skill-name">C / C++ (Arduino)</span>
+                        <span class="skill-level level-int">Intermediate</span>
+                    </article>
+                    <article class="skill-item">
+                        <span class="skill-cat">Protocol</span>
+                        <span class="skill-name">MQTT / HTTP</span>
+                        <span class="skill-level level-learn">Learning</span>
+                    </article>
+                </div>
+            </div>
+
+            <div class="skill-group">
+                <h3>WEB &amp; DATA</h3>
+                <div class="skills-grid">
+                    <article class="skill-item">
+                        <span class="skill-cat">Backend</span>
+                        <span class="skill-name">PHP / FastAPI</span>
+                        <span class="skill-level level-int">Intermediate</span>
+                    </article>
+                    <article class="skill-item">
+                        <span class="skill-cat">Frontend</span>
+                        <span class="skill-name">HTML / CSS / JS</span>
+                        <span class="skill-level level-adv">Advanced</span>
+                    </article>
+                    <article class="skill-item">
+                        <span class="skill-cat">Database</span>
+                        <span class="skill-name">SQL (MySQL)</span>
+                        <span class="skill-level level-int">Intermediate</span>
+                    </article>
+                    <article class="skill-item">
+                        <span class="skill-cat">Tooling</span>
+                        <span class="skill-name">Git / Linux CLI</span>
+                        <span class="skill-level level-adv">Advanced</span>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ═══ PORTFOLIO ═══ -->
     <section id="portfolio" class="section reveal">
         <div class="section-header">
-            <span class="section-num">02</span>
+            <span class="section-num">03</span>
             <span class="section-kicker">RECENT WORKS</span>
             <h2>SELECTED PROJECTS IN CYBERSECURITY AND INTELLIGENT SYSTEMS.</h2>
         </div>
@@ -219,8 +401,9 @@
             <!-- FEATURED: SmartDiscover -->
             <article class="portfolio-item portfolio-featured reveal" id="smartdiscover">
                 <div class="portfolio-visual portfolio-visual-featured">
-                    <img src="assets/smartdiscover-cover.png"
-                        alt="SmartDiscover — Multi-agent AI music discovery assistant" loading="lazy">
+                    <img src="assets/smartdiscover-cover.png" width="1200" height="750"
+                        alt="SmartDiscover — Multi-agent AI music discovery assistant" loading="lazy"
+                        decoding="async">
                     <span class="portfolio-index">★</span>
                     <span class="portfolio-featured-badge">FEATURED PROJECT</span>
                 </div>
@@ -232,7 +415,7 @@
                     <h3>SmartDiscover — AI Music Discovery</h3>
                     <p>Multi-agent AI music discovery assistant that turns natural-language mood prompts into ranked
                         Spotify recommendations and one-click playlist creation. Built with a 4-agent pipeline:
-                        Profiler → Spotify Search → Filter & Ranker → Presenter.</p>
+                        Profiler → Spotify Search → Filter &amp; Ranker → Presenter.</p>
                     <div class="portfolio-tags">
                         <span>Python</span>
                         <span>FastAPI</span>
@@ -252,8 +435,7 @@
 
             <article class="portfolio-item reveal">
                 <div class="portfolio-visual">
-                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop"
-                        alt="Cybersecurity abstract" loading="lazy">
+                    <span class="portfolio-visual-placeholder" aria-hidden="true">◆</span>
                     <span class="portfolio-index">02</span>
                 </div>
                 <div class="portfolio-body">
@@ -262,8 +444,8 @@
                         <span class="portfolio-year">2026</span>
                     </div>
                     <h3>Cybersecurity Research Pipeline</h3>
-                    <p>End-to-end security research workflow combining data analysis, threat modeling, and automated
-                        reporting.</p>
+                    <p>End-to-end security research workflow combining data analysis, threat modeling, and
+                        automated reporting for campus-scale case studies.</p>
                     <div class="portfolio-tags">
                         <span>Python</span>
                         <span>Security Tools</span>
@@ -274,8 +456,7 @@
 
             <article class="portfolio-item reveal">
                 <div class="portfolio-visual">
-                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop"
-                        alt="Web platform" loading="lazy">
+                    <span class="portfolio-visual-placeholder" aria-hidden="true">▲</span>
                     <span class="portfolio-index">03</span>
                 </div>
                 <div class="portfolio-body">
@@ -284,7 +465,8 @@
                         <span class="portfolio-year">2025</span>
                     </div>
                     <h3>Batak Family Heritage Platform</h3>
-                    <p>Cultural preservation system with searchable family lineage data and clean information flow.</p>
+                    <p>Cultural preservation system with searchable family lineage data, clean information flow,
+                        and simple admin tooling.</p>
                     <div class="portfolio-tags">
                         <span>PHP</span>
                         <span>JavaScript</span>
@@ -295,8 +477,7 @@
 
             <article class="portfolio-item reveal">
                 <div class="portfolio-visual">
-                    <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&h=400&fit=crop"
-                        alt="NLP research" loading="lazy">
+                    <span class="portfolio-visual-placeholder" aria-hidden="true">●</span>
                     <span class="portfolio-index">04</span>
                 </div>
                 <div class="portfolio-body">
@@ -305,7 +486,8 @@
                         <span class="portfolio-year">2025</span>
                     </div>
                     <h3>IndoBERT Sentiment Analysis</h3>
-                    <p>Indonesian text sentiment pipeline for classification experiments and practical analysis.</p>
+                    <p>Indonesian text sentiment pipeline for classification experiments and practical analysis on
+                        social-media-scale datasets.</p>
                     <div class="portfolio-tags">
                         <span>IndoBERT</span>
                         <span>Keras</span>
@@ -316,8 +498,7 @@
 
             <article class="portfolio-item reveal">
                 <div class="portfolio-visual">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop"
-                        alt="Embedded system" loading="lazy">
+                    <span class="portfolio-visual-placeholder" aria-hidden="true">■</span>
                     <span class="portfolio-index">05</span>
                 </div>
                 <div class="portfolio-body">
@@ -326,7 +507,8 @@
                         <span class="portfolio-year">2025</span>
                     </div>
                     <h3>ESP32 IoT Monitoring Prototypes</h3>
-                    <p>Realtime sensor data prototypes for telemetry and security-oriented embedded workflows.</p>
+                    <p>Realtime sensor data prototypes for telemetry and security-oriented embedded workflows,
+                        with minimal memory footprint.</p>
                     <div class="portfolio-tags">
                         <span>ESP32</span>
                         <span>C/C++</span>
@@ -335,23 +517,113 @@
                 </div>
             </article>
         </div>
+    </section>
 
-        <div class="credential-strip">
-            <button class="credential-item" data-cert="certificates/CyberOpsAssociate.pdf">
-                <span class="cred-icon">⬡</span>
-                CISCO CYBEROPS ASSOCIATE
-            </button>
-            <button class="credential-item" data-cert="certificates/IntroductionsToNetwroksCourse.pdf">
-                <span class="cred-icon">⬡</span>
-                INTRODUCTION TO NETWORKS
-            </button>
+    <!-- ═══ TIMELINE / JOURNEY ═══ -->
+    <section id="timeline" class="section reveal">
+        <div class="section-header">
+            <span class="section-num">04</span>
+            <span class="section-kicker">JOURNEY</span>
+            <h2>A SHORT TIMELINE OF LEARNING &amp; SHIPPING.</h2>
+        </div>
+
+        <div class="timeline-wrap">
+            <div class="timeline-item reveal">
+                <article class="timeline-card">
+                    <span class="timeline-year">2023</span>
+                    <h3>Enrolled at Universitas Islam Riau</h3>
+                    <p>Started Computer Science at UIR. First exposure to networking fundamentals and Linux
+                        environments.</p>
+                </article>
+            </div>
+
+            <div class="timeline-item reveal">
+                <article class="timeline-card">
+                    <span class="timeline-year">2024</span>
+                    <h3>Cybersecurity Focus Begins</h3>
+                    <p>Dove into pentesting labs, web vulnerabilities (SQLi, XSS), and the Cisco NetAcad track.
+                        First real forensics walkthroughs.</p>
+                </article>
+            </div>
+
+            <div class="timeline-item reveal">
+                <article class="timeline-card">
+                    <span class="timeline-year">2025</span>
+                    <h3>IndoBERT Sentiment Project</h3>
+                    <p>Built an Indonesian NLP pipeline with IndoBERT + Keras for classification experiments —
+                        first serious ML shipping experience.</p>
+                </article>
+            </div>
+
+            <div class="timeline-item reveal">
+                <article class="timeline-card">
+                    <span class="timeline-year">2025</span>
+                    <h3>CyberOps Associate — Cisco</h3>
+                    <p>Completed Cisco CyberOps Associate course + Introduction to Networks. SOC-oriented
+                        mindset locked in.</p>
+                </article>
+            </div>
+
+            <div class="timeline-item reveal">
+                <article class="timeline-card">
+                    <span class="timeline-year">2026</span>
+                    <h3>SmartDiscover Multi-Agent</h3>
+                    <p>Shipped SmartDiscover — a 4-agent LLM pipeline turning mood prompts into Spotify
+                        playlists. Current featured project.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CREDENTIALS EXPANDED ═══ -->
+    <section id="credentials" class="section reveal">
+        <div class="section-header">
+            <span class="section-num">05</span>
+            <span class="section-kicker">CREDENTIALS</span>
+            <h2>COURSES &amp; CERTIFICATIONS COMPLETED.</h2>
+        </div>
+
+        <div class="credentials-grid">
+            <article class="credential-card">
+                <div class="credential-thumb">
+                    <img src="certificates/CyberOpsAssociate.webp" alt="Cisco CyberOps Associate certificate"
+                        width="800" height="500" loading="lazy" decoding="async">
+                </div>
+                <div class="credential-body">
+                    <span class="credential-issuer">CISCO NETACAD</span>
+                    <h3>CyberOps Associate</h3>
+                    <p class="credential-meta">Completed 2025 · SOC analyst foundations, threat monitoring, and
+                        incident response workflows.</p>
+                    <button class="credential-btn" type="button" data-cert="certificates/CyberOpsAssociate.pdf"
+                        data-cert-name="Cisco CyberOps Associate"
+                        data-cert-img="certificates/CyberOpsAssociate.webp">VIEW CERTIFICATE →</button>
+                </div>
+            </article>
+
+            <article class="credential-card">
+                <div class="credential-thumb">
+                    <img src="certificates/IntroductionsToNetwroksCourse.webp"
+                        alt="Cisco Introduction to Networks certificate" width="800" height="500"
+                        loading="lazy" decoding="async">
+                </div>
+                <div class="credential-body">
+                    <span class="credential-issuer">CISCO NETACAD</span>
+                    <h3>Introduction to Networks</h3>
+                    <p class="credential-meta">Completed 2025 · Network fundamentals, IP addressing, routing and
+                        switching concepts.</p>
+                    <button class="credential-btn" type="button"
+                        data-cert="certificates/IntroductionsToNetwroksCourse.pdf"
+                        data-cert-name="Cisco Introduction to Networks"
+                        data-cert-img="certificates/IntroductionsToNetwroksCourse.webp">VIEW CERTIFICATE →</button>
+                </div>
+            </article>
         </div>
     </section>
 
     <!-- ═══ STATS ═══ -->
     <section id="stats" class="section reveal">
         <div class="section-header">
-            <span class="section-num">03</span>
+            <span class="section-num">06</span>
             <span class="section-kicker">TRUST INDICATORS</span>
             <h2>NUMBERS THAT REFLECT DEDICATION.</h2>
         </div>
@@ -380,7 +652,7 @@
     <!-- ═══ CONTACT ═══ -->
     <section id="contact" class="section reveal">
         <div class="section-header">
-            <span class="section-num">04</span>
+            <span class="section-num">07</span>
             <span class="section-kicker">CONTACT</span>
             <h2>LET'S BUILD PRACTICAL SECURITY SOLUTIONS TOGETHER.</h2>
         </div>
@@ -388,7 +660,8 @@
         <div class="contact-wrap">
             <p class="contact-desc">
                 Open to collaboration on cybersecurity research, digital forensics projects,
-                and AI-enhanced security workflows. Reach out and let's discuss your next project.
+                and AI-enhanced security workflows. Drop a message and let's talk about your next idea — whether
+                it's a side project, a thesis, or something bigger.
             </p>
 
             <div class="contact-links">
@@ -410,17 +683,29 @@
                     <span class="contact-link-arrow">→</span>
                 </a>
             </div>
+
+            <div class="contact-cta">
+                <a class="btn btn-big btn-primary" href="mailto:wahyumuliadisiregar@gmail.com">
+                    START A CONVERSATION →
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- ═══ MODAL ═══ -->
-    <div class="cert-modal" id="certModal" aria-hidden="true">
+    <div class="cert-modal" id="certModal" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-labelledby="certTitle">
         <div class="cert-modal-backdrop" id="certBackdrop"></div>
         <div class="cert-modal-content">
             <div class="cert-modal-header">
                 <p class="cert-modal-title" id="certTitle">Certificate</p>
-                <button class="cert-modal-close" id="certClose" aria-label="Close">✕</button>
+                <div class="cert-modal-actions">
+                    <a class="cert-modal-open" id="certOpen" href="#" target="_blank" rel="noopener noreferrer">OPEN
+                        PDF ↗</a>
+                    <button class="cert-modal-close" id="certClose" aria-label="Close">✕</button>
+                </div>
             </div>
+            <img class="cert-modal-frame" id="certImage" src="" alt="Certificate preview" style="display:none;">
             <iframe class="cert-modal-frame" id="certFrame" src="" title="Certificate viewer"></iframe>
         </div>
     </div>
@@ -435,188 +720,12 @@
             <div class="footer-right">
                 <p>ALL RIGHTS RESERVED</p>
                 <p>CYBERSECURITY · FORENSICS · AI</p>
+                <p>BUILT WITH HTML · CSS · JS</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        (function () {
-            'use strict';
-
-            /* ─── Utils ─── */
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-            /* ─── Year ─── */
-            const yearEl = document.getElementById('year');
-            if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-            /* ─── Scroll Progress Bar ─── */
-            const scrollProgress = document.getElementById('scrollProgress');
-            if (scrollProgress && !prefersReducedMotion) {
-                let ticking = false;
-                window.addEventListener('scroll', function () {
-                    if (!ticking) {
-                        requestAnimationFrame(function () {
-                            const scrollTop = window.scrollY;
-                            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-                            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-                            scrollProgress.style.width = progress + '%';
-                            ticking = false;
-                        });
-                        ticking = true;
-                    }
-                }, { passive: true });
-            }
-
-            /* ─── Scroll Reveal ─── */
-            const revealItems = document.querySelectorAll('.reveal');
-            if ('IntersectionObserver' in window) {
-                const obs = new IntersectionObserver(function (entries, observer) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('is-visible');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.08 });
-                revealItems.forEach(function (el) { obs.observe(el); });
-            } else {
-                revealItems.forEach(function (el) { el.classList.add('is-visible'); });
-            }
-
-            /* ─── Mobile Menu ─── */
-            const menuBtn = document.getElementById('menuBtn');
-            const mobileNav = document.getElementById('mobileNav');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
-
-            function toggleMenu() {
-                const isOpen = menuBtn.classList.toggle('is-open');
-                mobileNav.classList.toggle('is-open');
-                menuBtn.setAttribute('aria-expanded', isOpen);
-                mobileNav.setAttribute('aria-hidden', !isOpen);
-                document.body.style.overflow = isOpen ? 'hidden' : '';
-            }
-
-            if (menuBtn && mobileNav) {
-                menuBtn.addEventListener('click', toggleMenu);
-                mobileLinks.forEach(function (link) {
-                    link.addEventListener('click', toggleMenu);
-                });
-            }
-
-            /* ─── Certificate Modal ─── */
-            var modal = document.getElementById('certModal');
-            var frame = document.getElementById('certFrame');
-            var titleEl = document.getElementById('certTitle');
-            var closeBtn = document.getElementById('certClose');
-            var backdrop = document.getElementById('certBackdrop');
-
-            function openCert(src, name) {
-                frame.src = src;
-                titleEl.textContent = name;
-                modal.classList.add('is-open');
-                modal.setAttribute('aria-hidden', 'false');
-                document.body.style.overflow = 'hidden';
-            }
-            function closeCert() {
-                modal.classList.remove('is-open');
-                modal.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = '';
-                setTimeout(function () { frame.src = ''; }, 300);
-            }
-
-            document.querySelectorAll('[data-cert]').forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    openCert(btn.getAttribute('data-cert'), btn.textContent.trim());
-                });
-            });
-            if (closeBtn) closeBtn.addEventListener('click', closeCert);
-            if (backdrop) backdrop.addEventListener('click', closeCert);
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && modal.classList.contains('is-open')) closeCert();
-            });
-
-            /* ─── Active Nav on Scroll ─── */
-            (function initActiveNav() {
-                const sections = document.querySelectorAll('section[id]');
-                const navLinks = document.querySelectorAll('.top-nav a');
-
-                if (!sections.length || !navLinks.length) return;
-
-                let ticking = false;
-                window.addEventListener('scroll', function () {
-                    if (!ticking) {
-                        requestAnimationFrame(function () {
-                            let current = '';
-                            sections.forEach(function (section) {
-                                const sectionTop = section.offsetTop - 120;
-                                if (window.scrollY >= sectionTop) {
-                                    current = section.getAttribute('id');
-                                }
-                            });
-
-                            navLinks.forEach(function (link) {
-                                link.classList.remove('active');
-                                if (link.getAttribute('href') === '#' + current) {
-                                    link.classList.add('active');
-                                }
-                            });
-                            ticking = false;
-                        });
-                        ticking = true;
-                    }
-                }, { passive: true });
-            })();
-
-            /* ─── Hover distortion on service/portfolio cards ─── */
-            const allCards = document.querySelectorAll('.service-item, .portfolio-item');
-            allCards.forEach(function (card) {
-                card.addEventListener('mouseenter', function () {
-                    card.style.transform = 'translate(' + (Math.random() * 4 - 2) + 'px, -4px)';
-                });
-                card.addEventListener('mouseleave', function () {
-                    card.style.transform = '';
-                });
-            });
-
-            /* ─── Glitch text effect on hero ─── */
-            if (!prefersReducedMotion) {
-                const heroLines = document.querySelectorAll('.hero-line');
-                heroLines.forEach(function (line, i) {
-                    line.style.animationDelay = (i * 0.15) + 's';
-                });
-            }
-
-            /* ─── Focus Ticker ─── */
-            (function initTicker() {
-                const ticker = document.getElementById('focusTicker');
-                if (!ticker) return;
-                
-                const focuses = [
-                    "CYBERSECURITY",
-                    "DIGITAL FORENSICS",
-                    "AI / MACHINE LEARNING",
-                    "PYTHON & TENSORFLOW",
-                    "PENETRATION TESTING",
-                    "OSINT"
-                ];
-                let currentIndex = 0;
-                
-                setInterval(function() {
-                    ticker.style.opacity = '0';
-                    setTimeout(function() {
-                        currentIndex = (currentIndex + 1) % focuses.length;
-                        ticker.textContent = focuses[currentIndex];
-                        ticker.style.opacity = '1';
-                    }, 200); // Wait for fade out
-                }, 3000); // Change every 3 seconds
-
-                // Add transition for smooth fade
-                ticker.style.transition = 'opacity 0.2s ease';
-            })();
-
-        })();
-    </script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
